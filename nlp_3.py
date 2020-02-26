@@ -28,7 +28,7 @@ top20=sorted_items[:21]
 
 #print(top20)
 
-df=pd.DataFrame(top20,columns=["words","count"])
+df=pd.DataFrame(top20,columns=["word","count"])
 
 print(df)
 
@@ -39,9 +39,10 @@ import imageio
 df.plot.bar(x='word',y='count',rot=0,legend=False,color=['y','c','m','b','g','r'])
 
 plt.gcf().tight_layout()
-#plt.show()
 
-""" text=Path('RomeoAndJuliet.txt').read_text()
+plt.show()
+
+text=Path('RomeoAndJuliet.txt').read_text()
 
 mask_image=imageio.imread('mask_heart.png')
 wordcloud=WordCloud(colormap='prism',mask=mask_image,background_color='white')
@@ -49,4 +50,4 @@ wordcloud=wordcloud.generate(text)
 
 wordcloud=wordcloud.to_file('RomeoAndJulietHeart.png')
 plt.imshow(wordcloud)
-print('done') """
+print('done')
